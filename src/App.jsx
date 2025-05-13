@@ -11,7 +11,7 @@ export default function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/" element={<Contact />} />
           <Route exact path="/support" element={<FAQ />} />
         </Routes>
         <Footer />
