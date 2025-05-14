@@ -95,13 +95,17 @@ export default function FAQ() {
                 {openQuestion === index ? "−" : "+"}
               </span>
             </button>
-            {openQuestion === index && (
-              <div className="mt-3 md:mt-4">
-                <p className="text-sm md:text-base text-gray-600">
-                  {item.answer}
-                </p>
-              </div>
-            )}
+            <div
+              className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                openQuestion === index
+                  ? "max-h-40 opacity-100 mt-3 md:mt-4"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <p className="text-sm md:text-base text-gray-600">
+                {item.answer}
+              </p>
+            </div>
           </div>
         ))}
       </div>
