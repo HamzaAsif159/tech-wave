@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<Contact />} />
           <Route exact path="/support" element={<FAQ />} />
+          <Route exact path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>
