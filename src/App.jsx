@@ -13,7 +13,8 @@ export default function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Contact />} />
+          <Route path="/" element={<Store />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/support" element={<FAQ />} />
           <Route path="/about" element={<About />} />
           <Route path="/store" element={<Store />} />
