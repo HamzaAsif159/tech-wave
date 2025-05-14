@@ -27,14 +27,14 @@ export default function About() {
   ];
 
   const phoneImageUrl =
-    "https://framerusercontent.com/images/IfDy6W8JlOPxtH7rfsq9KM9bwU.png"; // Placeholder for the phone image
+    "https://framerusercontent.com/images/IfDy6W8JlOPxtH7rfsq9KM9bwU.png";
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 py-10 md:py-16 relative">
-      <div className="text-center mb-12 md:my-24">
+    <div className="max-w-[1400px] mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-16 relative overflow-hidden">
+      <div className="text-center mt-12 mb-6 sm:mb-8 md:mb-24">
         <h1
           id="about-heading"
-          className="text-3xl md:text-5xl font-medium mb-4 md:mb-6"
+          className="text-3xl md:text-5xl font-medium mb-2 md:mb-4"
           data-aos="fade-down"
         >
           About our products
@@ -50,89 +50,89 @@ export default function About() {
           meets our stringent standards.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-2 md:gap-6 relative">
-        <div
-          className="absolute bottom-0 left-0 right-0 h-[419px] bg-gradient-to-t from-white to-transparent opacity-100 z-[-1] flex-shrink-0"
-          style={{ position: "absolute" }}
-        />
-        {imageUrls.map((url, index) => (
+      <div className="relative">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-1 sm:gap-2 md:gap-4">
           <div
-            key={index}
-            className={`relative h-[250px] sm:h-[250px] md:h-[300px] overflow-hidden rounded-[40px] sm:rounded-[60px]
-              ${
-                [1, 3, 6, 8].includes(index)
-                  ? "md:-translate-y-10"
-                  : "md:translate-y-10"
-              }
-              ${index >= 2 ? "hidden sm:block" : ""} ${
-              index >= 5 ? "hidden md:block" : ""
-            }`}
-            data-aos="fade-down"
-            data-aos-anchor="#about-heading"
-            data-aos-delay={index * 50}
-          >
-            <img
-              src={url}
-              alt={`Product ${index + 1}`}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        ))}
+            className="absolute bottom-0 left-0 right-0 h-[419px] bg-gradient-to-t from-white to-transparent opacity-100 z-[-1]"
+            style={{ width: "100%", position: "absolute" }}
+          />
+          {imageUrls.map((url, index) => (
+            <div
+              key={index}
+              className={`relative h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden rounded-[40px] sm:rounded-[60px]
+                ${
+                  [1, 3, 6, 8].includes(index)
+                    ? "md:-translate-y-10"
+                    : "md:translate-y-10"
+                }
+                ${index >= 2 ? "hidden sm:block" : ""}
+                ${index >= 5 ? "hidden md:block" : ""}
+                w-full max-w-full`}
+              data-aos="fade-down"
+              data-aos-anchor="#about-heading"
+              data-aos-delay={index * 50}
+            >
+              <img
+                src={url}
+                alt={`Product ${index + 1}`}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="mt-12 md:mt-16">
-        {/* Stats Row */}
+      <div className="mt-6 sm:mt-8 md:mt-16">
         <div
-          className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 text-center mb-8 md:mb-12"
+          className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-1 sm:gap-2 md:gap-6 text-center mb-4 sm:mb-6 md:mb-12"
           data-aos="fade-up"
         >
-          <div className="p-4 bg-white rounded-3xl">
+          <div className="p-2 sm:p-4 bg-white rounded-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">2010</h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600">
               Year founded
             </p>
           </div>
-          <div className="p-4 bg-white rounded-3xl">
+          <div className="p-2 sm:p-4 bg-white rounded-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">+50</h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600">
               Collections
             </p>
           </div>
-          <div className="p-4 bg-white rounded-3xl">
+          <div className="p-2 sm:p-4 bg-white rounded-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">70K</h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600">
               Happy Customers
             </p>
           </div>
-          <div className="p-4 bg-white rounded-3xl">
+          <div className="p-2 sm:p-4 bg-white rounded-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">+250</h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600">
               Products
             </p>
           </div>
-          <div className="p-4 bg-white rounded-3xl">
+          <div className="p-2 sm:p-4 bg-white rounded-3xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">+25</h2>
             <p className="text-xs sm:text-sm md:text-base text-gray-600">
               Team members
             </p>
           </div>
         </div>
-        {/* Commitment Section */}
         <div
-          className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-4 md:gap-0 p-4 md:p-8 bg-white rounded-3xl"
+          className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-2 sm:gap-4 md:gap-0 p-2 sm:p-4 md:p-8 bg-white rounded-3xl"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div className="flex flex-col justify-center bg-[#F2F2F2] py-8 sm:py-12 px-6 sm:px-10 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none">
-            <h2 className="text-xl sm:text-2xl md:text-[45px] mb-4 leading-tight sm:leading-13">
+          <div className="flex flex-col justify-center bg-[#F2F2F2] py-4 sm:py-6 md:py-8 px-2 sm:px-4 md:px-6 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none">
+            <h2 className="text-xl sm:text-2xl md:text-[45px] mb-2 sm:mb-4 leading-tight sm:leading-13">
               We are committed to designing high quality, human-centered
               products
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-6">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-4 sm:mb-6">
               From the initial concept to the final product, we prioritize
               meticulous attention to detail and rigorous testing to ensure the
               utmost satisfaction of our customers.
             </p>
-            <button className="w-[200px] py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">
+            <button className="w-[180px] sm:w-[200px] py-2 sm:py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">
               Browse Products
             </button>
           </div>
@@ -145,17 +145,17 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-12 md:mt-16 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-4">
+      <div className="mt-6 sm:mt-8 md:mt-16 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium mb-2 sm:mb-4">
           Our Values
         </h2>
-        <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-[1000px] mx-auto mb-8">
+        <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-[1000px] mx-auto mb-4 sm:mb-8">
           We value innovation and continuously seek to push boundaries,
           delivering products that inspire and delight. Join us in embracing
           these values and become part of our mission to make a positive
           difference in the world.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-1 sm:gap-2 md:gap-4">
           <ValueCard
             icon={<i className="fa fa-cut"></i>}
             title="Design"
@@ -188,9 +188,9 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="mt-12 md:mt-24">
+      <div className="mt-6 sm:mt-12 md:mt-24">
         <div
-          className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 md:gap-8 p-4 md:p-0 bg-white rounded-3xl"
+          className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-2 sm:gap-4 md:gap-4 p-2 sm:p-4 md:p-0 bg-white rounded-3xl"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -201,31 +201,31 @@ export default function About() {
               className="w-full h-[300px] sm:h-[400px] md:h-[700px] object-cover"
             />
           </div>
-          <div className="flex flex-col justify-center bg-[#F2F2F2] py-8 sm:py-12 px-6 sm:px-10 rounded-[40px]">
-            <h2 className="text-xl sm:text-2xl md:text-[35px] pr-10 mb-4 leading-tight sm:leading-13 tracking-tight">
+          <div className="flex flex-col justify-center bg-[#F2F2F2] py-4 sm:py-6 md:py-8 px-2 sm:px-4 md:px-6 rounded-[40px]">
+            <h2 className="text-xl sm:text-2xl md:text-[35px] pr-2 sm:pr-4 md:pr-10 mb-2 sm:mb-4 leading-tight sm:leading-13 tracking-tight">
               Care and love for creating high quality design
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-6">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-4 sm:mb-6">
               We believe that exceptional design goes beyond aesthetics; it
               encompasses functionality, user experience, and attention to
               detail. With meticulous care and commitment to quality, our
               talented designers and engineers bring forth products that are
               both visually stunning and intuitive to use.
             </p>
-            <button className="w-[200px] py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">
+            <button className="w-[180px] sm:w-[200px] py-2 sm:py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">
               Browse Products
             </button>
           </div>
         </div>
       </div>
       <div
-        className="mt-12 sm:mt-20 p-4 sm:p-6 md:p-8 min-h-[300px] bg-[#F8F8F8] rounded-3xl flex flex-col items-center justify-center text-center"
+        className="mt-6 sm:mt-12 md:mt-20 p-2 sm:p-4 md:p-6 min-h-[300px] bg-[#F8F8F8] rounded-3xl flex flex-col items-center justify-center text-center"
         data-aos="fade-up"
       >
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-2 sm:mb-4">
           Our partners
         </h2>
-        <div className="flex flex-wrap justify-center mx-auto gap-4 max-w-[600px]">
+        <div className="flex flex-wrap justify-center mx-auto gap-2 sm:gap-4 max-w-[600px]">
           <div className="flex items-center gap-2">
             <i className="fas fa-square fa-2x text-gray-400"></i>
             <span className="text-gray-400 text-xl sm:text-2xl font-bold">
@@ -248,18 +248,18 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-12 md:mt-16 text-center">
+      <div className="mt-6 sm:mt-12 md:mt-16 text-center">
         <div
-          className="p-4 sm:p-6 md:p-8 bg-white rounded-3xl"
+          className="p-2 sm:p-4 md:p-6 bg-white rounded-3xl"
           data-aos="fade-up"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-2 sm:mb-4">
             Follow us on Instagram
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-6">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-4 sm:mb-6">
             @nomad_official
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-1 sm:gap-2 md:gap-4">
             <div className="overflow-hidden rounded-[40px] max-h-[200px] sm:max-h-[300px] group relative">
               <img
                 src={imageUrls[0]}
@@ -330,12 +330,12 @@ export default function About() {
 const ValueCard = ({ icon, title, description }) => {
   return (
     <div
-      className="px-4 py-8 sm:py-12 bg-[#F8F8F8] rounded-3xl flex flex-col items-center text-center"
+      className="px-2 sm:px-4 py-4 sm:py-8 bg-[#F8F8F8] rounded-3xl flex flex-col items-center text-center"
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      <div className="text-3xl sm:text-4xl mb-4 sm:mb-6">{icon}</div>
-      <h3 className="text-xl sm:text-2xl mb-4">{title}</h3>
+      <div className="text-3xl sm:text-4xl mb-2 sm:mb-4">{icon}</div>
+      <h3 className="text-xl sm:text-2xl mb-2 sm:mb-4">{title}</h3>
       <p className="text-xs sm:text-sm text-gray-600">{description}</p>
     </div>
   );
