@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Store from "./pages/Store";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Store />} />
+          <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/support" element={<FAQ />} />
           <Route path="/about" element={<About />} />
