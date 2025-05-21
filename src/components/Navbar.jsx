@@ -36,21 +36,8 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <NavLink to="/" className="flex items-center">
                 {/* Grid icon SVG */}
-                <svg
-                  className="h-6 w-6 mr-2 text-gray-800"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h4v4H4V6zm0 6h4v4H4v-4zm6-6h4v4h-4V6zm0 6h4v4h-4v-4zm6-6h4v4h-4V6zm0 6h4v4h-4v-4z"
-                  />
-                </svg>
                 <span className="text-xl font-bold text-gray-800">
-                  Tech Wave
+                  Techwave
                 </span>
               </NavLink>
             </div>
